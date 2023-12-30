@@ -2,7 +2,7 @@ package Role;
 import java.util.ArrayList;
 import java.util.List;
 public class DataStorage {
-    private List<Patient> patients;
+    private final List<Patient> patients;
     public DataStorage(){
         this.patients = new ArrayList<>();
     }

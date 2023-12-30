@@ -4,11 +4,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Receptionist {
+    private final DataStorage dataBasePatient;
+//    private final DataStorage dataStorageMedInterne;
+//    private final DataStorage dataStorageChirurgie;
+//    private final DataStorage dataStorageObstetrique;
 
-    private final DataStorage dataStorage;
-
-    public Receptionist(DataStorage dataStorage){
-        this.dataStorage = dataStorage;
+    public Receptionist(DataStorage dataBasePatient) {
+        this.dataBasePatient = dataBasePatient;
+//        this.dataStorageMedInterne = dataStorageMedInterne;
+//        this.dataStorageChirurgie = dataStorageChirurgie;
+//        this.dataStorageObstetrique = dataStorageObstetrique;
     }
 
     public void registerPatient() {
@@ -48,12 +53,35 @@ public class Receptionist {
 
         Patient patient = new Patient(name, age, address, phoneNumber);
         patient.setDiagnosis(diagnosis);
-        dataStorage.addPatient(patient);
+
+//        switch (diagnosis) {
+//            case "Chirurgie":
+//                dataStorageChirurgie.addPatient(patient);
+//                break;
+//            case "Medicine Interne":
+//                dataStorageMedInterne.addPatient(patient);
+//                break;
+//            case "Obstetrique":
+//                dataStorageObstetrique.addPatient(patient);
+//                break;
+//        }
+        dataBasePatient.addPatient(patient);
 
         System.out.println("src.Role.Patient registered successfully!");
     }
-
-    public List<Patient> getPatientDatabase() {
-        return dataStorage.getPatients();
+    public DataStorage getDataBasePatient() {
+        return dataBasePatient;
     }
+
+//    public DataStorage getDataStorageMedInterne() {
+//        return dataStorageMedInterne;
+//    }
+//
+//    public DataStorage getDataStorageChirurgie() {
+//        return dataStorageChirurgie;
+//    }
+//
+//    public DataStorage getDataStorageObstetrique() {
+//        return dataStorageObstetrique;
+//    }
 }
