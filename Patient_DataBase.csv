@@ -1,6 +1,4 @@
-Name , Age, Address, Phone Number, Diagnosis
-linda, 56, toulouse, 0254125456, Obstetrique
-Milena, 45, toulouse, 0254658456, Chirurgie
-Chau, 65, paris, 0123456789, Medicine Interne
-Thuong, 45, Dusseldorf, 0123456789, Chirurgie
-Edward, 56, Toulouse, 01234567789, Obstetrique
+Patient ID, Name , Family Name, Age, Address, Phone Number, Diagnosis
+80636536-4f69-49c1-9b0d-7c8cea56e9c0, Jean, Jaures, 45, Toulouse, 0123456785, Chirurgie
+73d2cc65-cc85-413b-afed-c4cff7401d4f, Margaret, Grant, 56, Wed Feb 11 00:00:00 CET 1998, Toulouse, 0254658122
+6c03f09e-ccb4-4823-904e-55d546572ba7, James, Dean, 78, Nov 13 1995, Toulouse, 0123456789

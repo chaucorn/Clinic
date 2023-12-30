@@ -1,6 +1,6 @@
 package Role;
 
-import java.util.List;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Receptionist {
@@ -22,9 +22,13 @@ public class Receptionist {
         System.out.println("Enter patient details:");
         System.out.print("Name: ");
         String name = scanner.nextLine();
+        System.out.print("Family Name: ");
+        String familyName = scanner.nextLine();
         System.out.print("Age: ");
         int age = scanner.nextInt();
         scanner.nextLine(); // Consume the newline character
+        System.out.print("Date of Birth yyyy-MM-dd: ");
+        String dateOfBirth = scanner.nextLine();
         System.out.print("Address: ");
         String address = scanner.nextLine();
         System.out.print("Phone Number: ");
@@ -51,7 +55,8 @@ public class Receptionist {
                 System.out.println("Invalid choice");
         }
 
-        Patient patient = new Patient(name, age, address, phoneNumber);
+
+        Patient patient = new Patient(name, familyName, age, dateOfBirth, address, phoneNumber);
         patient.setDiagnosis(diagnosis);
 
 //        switch (diagnosis) {

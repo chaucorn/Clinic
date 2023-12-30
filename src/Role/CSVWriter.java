@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.util.List;
 public class CSVWriter {
 
-    public static void writePatientToCSVs(List<Patient> patients, String filePath, String filePathMedIn, String filePathChirurgie, String filePathObstetrique) {
+    public static void writePatientToCSVs(List<Patient> patients, String filePath, String filePathMedIn,
+                                          String filePathChirurgie, String filePathObstetrique) {
         if (patients.isEmpty()) {
             return;
         }
@@ -15,7 +16,8 @@ public class CSVWriter {
              FileWriter writerObstetrique = new FileWriter(filePathObstetrique, true)) {
 
             for (Patient patient : patients) {
-                String patientData = String.format("%s, %s, %s, %s, %s\n", patient.getName(), patient.getAge(),
+                String patientData = String.format("%s, %s, %s, %s, %s, %s, %s\n", patient.getPatientId(),
+                        patient.getName(), patient.getFamilyName(), patient.getAge(), patient.getDateOfBirth(),
                         patient.getAddress(), patient.getPhoneNumber(), patient.getDiagnosis());
 
                 writerAll.append(patientData);

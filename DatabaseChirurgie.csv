@@ -1,2 +1,3 @@
-Name , Age, Address, Phone Number, Diagnosis
-Thuong, 45, Dusseldorf, 0123456789, Chirurgie
+Patient ID, Name , Family Name, Age, Address, Phone Number, Diagnosis
+
+80636536-4f69-49c1-9b0d-7c8cea56e9c0, Jean, Jaures, 45, Toulouse, 0123456785, Chirurgie
